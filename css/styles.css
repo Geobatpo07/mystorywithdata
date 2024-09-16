@@ -1,0 +1,116 @@
+/* Styles de base */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #007bff; /* Couleur de fond pour l'en-tête */
+    color: #fff; /* Couleur du texte pour l'en-tête */
+    padding: 15px 0;
+}
+
+header .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff !important;
+}
+
+header .navbar-nav .nav-link {
+    color: #fff !important;
+}
+
+header .navbar-nav .nav-link:hover {
+    color: #ffdd57 !important; /* Couleur au survol des liens de navigation */
+}
+
+footer {
+    background-color: #f8f9fa; /* Couleur de fond pour le pied de page */
+    padding: 15px 0;
+    color: #6c757d; /* Couleur du texte pour le pied de page */
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #007bff;
+}
+
+footer a:hover {
+    color: #0056b3;
+}
+
+/* Contenu principal */
+main {
+    margin: 20px auto;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+main p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Colonnes */
+.col-md-6 {
+    margin-bottom: 20px;
+}
+
+/* Boutons personnalisés */
+.btn-custom {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* Liens dans les listes */
+ul li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Mise en page responsive */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/* Exemple de style personnalisé pour le menu déroulant */
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+}
+
+.navbar-light .navbar-nav .dropdown-menu {
+    background-color: #f8f9fa; /* Couleur de fond */
+}
+
+.navbar-light .navbar-nav .dropdown-item:hover {
+    background-color: #e9ecef; /* Couleur de survol */
+    color: #000; /* Couleur du texte sur survol */
+}

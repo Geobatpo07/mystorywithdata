@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - My Story with Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                });
+            fetch('components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        });
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+
+    <main class="container mt-4">
+        <h1 class="text-center">À propos de moi</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Mon Parcours</h2>
+                <p>Je suis un passionné de mathématiques et de technologie avec une formation approfondie en analyse de données et en génie civil. J'ai obtenu ma licence en mathématiques à l'École Normale Supérieure de l'Université d'État d'Haïti, et j'ai suivi un parcours en génie civil à la Faculté des Sciences de la même université.</p>
+                <p>Actuellement, je poursuis des études en Master en Mathématiques à l'Université Paris Saclay, avec un intérêt particulier pour les corps finis, les caractères, et les applications des sommes de Gauss dans la technologie de l'information.</p>
+            </div>
+            <div class="col-md-6">
+                <h2>Mes Compétences</h2>
+                <ul>
+                    <li>Analyse de données avec Python et R</li>
+                    <li>Certification Microsoft Certified Analytics Engineer Associate</li>
+                    <li>Certificat Google Data Analytics Professional</li>
+                    <li>Certification Google Business Intelligence Professional</li>
+                    <li>Utilisation d'OpenCV pour le traitement des images</li>
+                    <li>Développement de projets GitHub et utilisation de Bootstrap</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+</body>
+</html>
