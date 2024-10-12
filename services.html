@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - My Story with Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Styles pour la page des services */
+        .carousel-item {
+            height: 400px; /* Hauteur fixe pour les éléments du carrousel */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .service-icon {
+            font-size: 100px; /* Taille de l'icône */
+            margin-bottom: 20px;
+            color: #007bff; /* Couleur des icônes */
+        }
+
+        .service-description {
+            color: #333; /* Couleur du texte de description */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Mes Services</h1>
+        <p class="text-center mb-4">Découvrez les services que je propose en Data Science, IA et visualisation.</p>
+
+        <!-- Carrousel des services -->
+        <div id="servicesCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+            <div class="carousel-inner">
+                <!-- Service 1 -->
+                <div class="carousel-item active">
+                    <div>
+                        <span class="service-icon">&#128187;</span> <!-- Icône pour Analyse de Données -->
+                        <h5>Analyse de Données</h5>
+                        <p class="service-description">Je propose des services d'analyse de données pour extraire des insights significatifs.</p>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="carousel-item">
+                    <div>
+                        <span class="service-icon">&#128200;</span> <!-- Icône pour Visualisation de Données -->
+                        <h5>Visualisation de Données</h5>
+                        <p class="service-description">Création de visualisations interactives pour faciliter la prise de décision.</p>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="carousel-item">
+                    <div>
+                        <span class="service-icon">&#128161;</span> <!-- Icône pour Modélisation Prédictive -->
+                        <h5>Modélisation Prédictive</h5>
+                        <p class="service-description">Développement de modèles prédictifs pour anticiper les tendances futures.</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#servicesCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Précédent</span>
+            </a>
+            <a class="carousel-control-next" href="#servicesCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Suivant</span>
+            </a>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Charger header et footer
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                });
+            fetch('components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        });
+    </script>
+</body>
+
+</html>

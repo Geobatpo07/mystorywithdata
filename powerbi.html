@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapports Power BI - My Story with Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            display: flex;
+        }
+
+        /* Menu latéral */
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            background-color: #343a40;
+            color: white;
+            position: fixed;
+            padding-top: 20px;
+            transition: width 0.5s;
+        }
+
+        .sidebar a {
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            display: block;
+            font-size: 1.2em;
+            transition: background-color 0.2s;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+
+        /* Contenu principal */
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .report-iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+
+        .report-header {
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 5px solid #007bff;
+        }
+
+        .report-header h2 {
+            margin: 0;
+        }
+
+        .section-title {
+            margin-top: 20px;
+            color: #007bff;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar">
+        <h3 class="text-center">Mes Rapports Power BI</h3>
+        <a href="#rapport1">Rapport 1 : Analyse des Ventes</a>
+        <a href="#rapport2">Rapport 2 : Performance Financière</a>
+        <a href="#rapport3">Rapport 3 : Satisfaction Client</a>
+        <a href="#rapport4">Rapport 4 : Optimisation des Stocks</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1 class="text-center">Visualisation des Rapports Power BI</h1>
+        <p class="text-center">Découvrez mes rapports interactifs créés avec Power BI.</p>
+
+        <!-- Rapport 1 -->
+        <section id="rapport1">
+            <div class="report-header">
+                <h2>Rapport 1 : Analyse des Ventes</h2>
+                <p>Ce rapport fournit une analyse détaillée des ventes mensuelles, des tendances et des prévisions.</p>
+            </div>
+            <iframe class="report-iframe" src="https://app.powerbi.com/reportEmbed?reportId=xxxxxxxx&autoAuth=true&ctid=xxxxxxx"></iframe>
+        </section>
+
+        <!-- Rapport 2 -->
+        <section id="rapport2">
+            <div class="report-header">
+                <h2>Rapport 2 : Performance Financière</h2>
+                <p>Un rapport complet sur la performance financière de l'entreprise, avec des indicateurs clés et des graphiques.</p>
+            </div>
+            <iframe class="report-iframe" src="https://app.powerbi.com/reportEmbed?reportId=yyyyyyyy&autoAuth=true&ctid=yyyyyyy"></iframe>
+        </section>
+
+        <!-- Rapport 3 -->
+        <section id="rapport3">
+            <div class="report-header">
+                <h2>Rapport 3 : Satisfaction Client</h2>
+                <p>Mesurez la satisfaction des clients à travers divers indicateurs basés sur les retours d'expérience.</p>
+            </div>
+            <iframe class="report-iframe" src="https://app.powerbi.com/reportEmbed?reportId=zzzzzzzz&autoAuth=true&ctid=zzzzzzz"></iframe>
+        </section>
+
+        <!-- Rapport 4 -->
+        <section id="rapport4">
+            <div class="report-header">
+                <h2>Rapport 4 : Optimisation des Stocks</h2>
+                <p>Optimisez la gestion des stocks grâce à ce rapport interactif qui présente des tendances d'inventaire et des suggestions d'amélioration.</p>
+            </div>
+            <iframe class="report-iframe" src="https://app.powerbi.com/reportEmbed?reportId=wwwwwwww&autoAuth=true&ctid=wwwwwww"></iframe>
+        </section>
+
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Chargement des components header et footer
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                });
+            fetch('components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        });
+    </script>
+</body>
+
+</html>

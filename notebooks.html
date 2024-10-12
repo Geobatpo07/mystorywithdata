@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - My Story with Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            display: flex;
+        }
+
+        /* Menu latéral */
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            background-color: #343a40;
+            color: white;
+            position: fixed;
+            padding-top: 20px;
+            transition: width 0.5s;
+        }
+
+        .sidebar a {
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            display: block;
+            font-size: 1.2em;
+            transition: background-color 0.2s;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057;
+        }
+
+        /* Contenu principal */
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .notebook-iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+
+        .notebook-header {
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 5px solid #28a745;
+        }
+
+        .notebook-header h2 {
+            margin: 0;
+        }
+
+        .btn-download {
+            margin-right: 10px;
+        }
+
+        .section-title {
+            margin-top: 20px;
+            color: #28a745;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar">
+        <h3 class="text-center">Mes Notebooks Jupyter</h3>
+        <a href="#notebook1">Notebook 1 : Analyse Exploratoire (Python)</a>
+        <a href="#notebook2">Notebook 2 : Modélisation Prédictive (Python)</a>
+        <a href="#notebook3">Notebook 3 : Statistiques (R)</a>
+        <a href="#notebook4">Notebook 4 : Machine Learning (Python)</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div id="header"></div>
+
+        <h1 class="text-center">Exploration des Notebooks Jupyter</h1>
+        <p class="text-center">Explorez mes notebooks interactifs créés avec Python et R.</p>
+
+        <!-- Notebook 1 -->
+        <section id="notebook1">
+            <div class="notebook-header">
+                <h2>Notebook 1 : Analyse Exploratoire (Python)</h2>
+                <p>Ce notebook présente une analyse exploratoire des données avec des visualisations interactives.</p>
+                <a href="notebooks/notebook1.html" class="btn btn-success btn-download">Voir en HTML</a>
+                <a href="notebooks/notebook1.ipynb" class="btn btn-info btn-download">Télécharger en .ipynb</a>
+            </div>
+            <iframe class="notebook-iframe" src="notebooks/notebook1.html"></iframe>
+        </section>
+
+        <!-- Notebook 2 -->
+        <section id="notebook2">
+            <div class="notebook-header">
+                <h2>Notebook 2 : Modélisation Prédictive (Python)</h2>
+                <p>Une étude de cas en modélisation prédictive utilisant des algorithmes de machine learning.</p>
+                <a href="notebooks/notebook2.html" class="btn btn-success btn-download">Voir en HTML</a>
+                <a href="notebooks/notebook2.ipynb" class="btn btn-info btn-download">Télécharger en .ipynb</a>
+            </div>
+            <iframe class="notebook-iframe" src="notebooks/notebook2.html"></iframe>
+        </section>
+
+        <!-- Notebook 3 -->
+        <section id="notebook3">
+            <div class="notebook-header">
+                <h2>Notebook 3 : Statistiques (R)</h2>
+                <p>Ce notebook utilise R pour explorer des concepts statistiques appliqués à un ensemble de données.</p>
+                <a href="notebooks/notebook3.html" class="btn btn-success btn-download">Voir en HTML</a>
+                <a href="notebooks/notebook3.ipynb" class="btn btn-info btn-download">Télécharger en .ipynb</a>
+            </div>
+            <iframe class="notebook-iframe" src="notebooks/notebook3.html"></iframe>
+        </section>
+
+        <!-- Notebook 4 -->
+        <section id="notebook4">
+            <div class="notebook-header">
+                <h2>Notebook 4 : Machine Learning (Python)</h2>
+                <p>Explorez les concepts de machine learning à travers cet exemple pratique en Python.</p>
+                <a href="notebooks/notebook4.html" class="btn btn-success btn-download">Voir en HTML</a>
+                <a href="notebooks/notebook4.ipynb" class="btn btn-info btn-download">Télécharger en .ipynb</a>
+            </div>
+            <iframe class="notebook-iframe" src="notebooks/notebook4.html"></iframe>
+        </section>
+
+        <div id="footer"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Chargement des components header et footer
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                });
+            fetch('components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html>

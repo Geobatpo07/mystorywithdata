@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - My Story with Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                });
+            fetch('components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        });
+    </script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-top: 30px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        .feedback-card {
+            border: 1px solid #007bff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .submit-button {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <main class="container mt-4">
+        <h1 class="text-center">Vos Retours</h1>
+        <p class="text-center">Nous aimerions avoir vos retours sur nos projets et services. Votre avis est précieux pour nous !</p>
+        
+        <form id="feedback-form" class="mt-4">
+            <div class="form-group">
+                <label for="name">Nom</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Votre Message</label>
+                <textarea class="form-control" id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn submit-button">Envoyer</button>
+        </form>
+
+        <h2 class="mt-5">Retours Recus</h2>
+        <div class="feedback-card">
+            <p><strong>Geovany Batista Polo LAGUERRE :</strong> Un excellent portfolio, très inspirant !</p>
+        </div>
+        <!--<div class="feedback-card">
+            <p><strong>Marie Curie :</strong> Les projets sont très bien présentés. J'ai hâte de voir plus !</p>
+        </div>-->
+    </main>
+
+    <div id="footer"></div>
+    
+    <script>
+        // Fonction pour gérer l'envoi du formulaire
+        document.getElementById('feedback-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Merci pour votre retour !');
+            // Réinitialiser le formulaire
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

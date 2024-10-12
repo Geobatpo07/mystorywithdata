@@ -1,9 +1,12 @@
-<footer class="bg-light text-center py-3">
-    <p>&copy; 2024 My Story with Data. Tous droits réservés.</p>
-    <p>Développé avec <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> et <a href="https://github.com/geobatpo07" target="_blank">GitHub</a></p>
-    <div>
-        <a href="https://twitter.com/YourTwitterHandle" target="_blank">Twitter</a> | 
-        <a href="https://linkedin.com/in/YourLinkedInProfile" target="_blank">LinkedIn</a>
+<footer class="bg-light text-center py-4">
+    <div class="container">
+        <p class="mb-1">&copy; 2024 My Story with Data. Tous droits réservés.</p>
+        <p class="mb-3">Développé avec <a href="https://getbootstrap.com/" target="_blank" class="text-success">Bootstrap</a> et <a href="https://github.com/geobatpo07" target="_blank" class="text-success">GitHub</a></p>
+        <div class="social-links">
+            <a href="https://twitter.com/YourTwitterHandle" target="_blank" class="text-success mx-2">Twitter</a>
+            <a href="https://linkedin.com/in/YourLinkedInProfile" target="_blank" class="text-success mx-2">LinkedIn</a>
+        </div>
+        <p class="mt-3"><small>Merci de visiter mon portfolio. N'hésitez pas à me contacter !</small></p>
     </div>
 </footer>
 
@@ -11,3 +14,29 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+    /* Styles personnalisés pour le pied de page */
+    footer {
+        position: relative;
+        background-color: #f8f9fa;
+        border-top: 1px solid #dee2e6;
+    }
+
+    .social-links a {
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+        color: #28a745; /* Couleur verte au survol */
+        text-decoration: underline;
+    }
+
+    /* Responsive padding */
+    @media (max-width: 576px) {
+        footer {
+            padding: 20px 0;
+        }
+    }
+</style>

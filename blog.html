@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - My Story with Data</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                });
+            fetch('components/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        });
+
+        // Fonction pour filtrer les articles par catégorie
+        function filterArticles(category) {
+            $('.blog-post').each(function() {
+                if (category === 'all' || $(this).data('category') === category) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        }
+    </script>
+    <style>
+        .blog-header {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+            text-align: center;
+            color: #343a40;
+        }
+        .blog-header h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .blog-header p {
+            font-size: 1.2em;
+            color: #6c757d;
+        }
+        .blog-post {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .blog-post h3 {
+            margin-top: 0;
+        }
+        .blog-post p {
+            color: #6c757d;
+        }
+        .category-btn {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Blog Header -->
+    <section class="blog-header">
+        <div class="container">
+            <h1>Bienvenue sur mon blog</h1>
+            <p>Mes pensées, analyses et tutoriels sur la Data Science, l'IA, et plus encore.</p>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <main class="container mt-4">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Explorez mes articles</h2>
+                <p>Choisissez une catégorie pour filtrer les articles :</p>
+                <div class="btn-group mb-4" role="group" aria-label="Filter Categories">
+                    <button type="button" class="btn btn-outline-primary category-btn" onclick="filterArticles('all')">Tous</button>
+                    <button type="button" class="btn btn-outline-secondary category-btn" onclick="filterArticles('Data Science')">Data Science</button>
+                    <button type="button" class="btn btn-outline-success category-btn" onclick="filterArticles('AI')">Intelligence Artificielle</button>
+                    <button type="button" class="btn btn-outline-info category-btn" onclick="filterArticles('Visualisation')">Visualisation</button>
+                    <button type="button" class="btn btn-outline-warning category-btn" onclick="filterArticles('Autre')">Autres</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Article 1 -->
+            <div class="col-md-6 blog-post" data-category="Data Science">
+                <h3>Introduction à la Data Science</h3>
+                <p><strong>Date :</strong> 15 Octobre 2024 | <strong>Catégorie :</strong> Data Science</p>
+                <p>Découvrez les bases de la Data Science, ses outils et ses méthodologies...</p>
+                <a href="article1.html" class="btn btn-primary">Lire la suite</a>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="col-md-6 blog-post" data-category="AI">
+                <h3>Les bases de l'Intelligence Artificielle</h3>
+                <p><strong>Date :</strong> 22 Septembre 2024 | <strong>Catégorie :</strong> Intelligence Artificielle</p>
+                <p>Plongez dans le monde de l'IA, de ses algorithmes et de ses applications...</p>
+                <a href="article2.html" class="btn btn-primary">Lire la suite</a>
+            </div>
+
+            <!-- Article 3 -->
+            <div class="col-md-6 blog-post" data-category="Visualisation">
+                <h3>Visualiser vos données avec Power BI</h3>
+                <p><strong>Date :</strong> 8 Août 2024 | <strong>Catégorie :</strong> Visualisation</p>
+                <p>Comment utiliser Power BI pour créer des tableaux de bord interactifs...</p>
+                <a href="article3.html" class="btn btn-primary">Lire la suite</a>
+            </div>
+
+            <!-- Article 4 -->
+            <div class="col-md-6 blog-post" data-category="Autre">
+                <h3>Les tendances actuelles en Data Science</h3>
+                <p><strong>Date :</strong> 1er Juillet 2024 | <strong>Catégorie :</strong> Autres</p>
+                <p>Un regard sur les tendances émergentes en Data Science et leur impact sur les entreprises...</p>
+                <a href="article4.html" class="btn btn-primary">Lire la suite</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+</body>
+</html>
