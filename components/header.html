@@ -1,82 +1,82 @@
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Story with Data</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico"> <!-- Lien vers le favicon -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Story with Data</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"> <!-- Lien vers le favicon -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-  <a class="navbar-brand" href="index.html">
-      <img src="images/logo.png" alt="Logo" style="height: 40px;"> My Story with Data
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-              <a class="nav-link custom-btn" href="index.html">Accueil</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link custom-btn" href="about.html">À propos</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link custom-btn" href="contact.html">Contacts</a>
-          </li>
-          <!--<li class="nav-item">
-              <a class="nav-link btn btn-outline-success ml-3" href="notebooks.html" role="button">Mes Notebooks</a>
-          </li>-->
-      </ul>
-  </div>
+<a class="navbar-brand" href="index.html">
+    <img src="assets/img/logo.png" alt="Logo" style="height: 40px;"> My Story with Data
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link custom-btn" href="index.html">Accueil</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link custom-btn" href="about.html">À propos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link custom-btn" href="contact.html">Contacts</a>
+        </li>
+        <!--<li class="nav-item">
+            <a class="nav-link btn btn-outline-success ml-3" href="notebooks.html" role="button">Mes Notebooks</a>
+        </li>-->
+    </ul>
+</div>
 </nav>
 
 <style>
-  /* Ajout d'une ombre et d'un effet de transition */
-  .navbar {
-      transition: background-color 0.3s, box-shadow 0.3s;
-  }
+/* Ajout d'une ombre et d'un effet de transition pour la barre de navigation */
+.navbar {
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
 
-  .navbar:hover {
-      background-color: #f8f9fa;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+.navbar:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-  /* Styles pour les boutons de navigation */
-  .nav-link.custom-btn {
-      background-color: #e9ecef; /* Couleur de fond initiale */
-      color: #343a40; /* Couleur du texte */
-      padding: 10px 15px; /* Espacement interne */
-      border-radius: 5px; /* Coins arrondis */
-      margin: 0 5px; /* Espacement entre les boutons */
-      transition: background-color 0.3s, color 0.3s;
-  }
+/* Styles pour les boutons de navigation */
+.nav-link.custom-btn {
+    background-color: #e9ecef; /* Couleur de fond initiale */
+    color: #343a40; /* Couleur du texte */
+    padding: 10px 15px; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis */
+    margin: 0 5px; /* Espacement entre les boutons */
+    transition: background-color 0.3s, color 0.3s;
+}
 
-  /* Effets de survol pour les boutons de navigation */
-  .nav-link.custom-btn:hover {
-      background-color: #28a745; /* Couleur de fond au survol */
-      color: white; /* Couleur du texte au survol */
-  }
+/* Effets de survol pour les boutons de navigation */
+.nav-link.custom-btn:hover {
+    background-color: #828a94; /* Couleur de fond noire au survol */
+    color: #007bff; /* Couleur du texte bleu au survol */
+}
 
-  /* Effets de survol pour les liens de navigation */
-  .nav-link {
-      transition: color 0.3s;
-  }
+/* Effets de survol pour les liens de navigation */
+.nav-link {
+    transition: color 0.3s;
+}
 
-  .nav-link:hover {
-      color: #28a745; /* Couleur verte au survol */
-  }
+.nav-link:hover {
+    color: #007bff; /* Texte en bleu lors du survol */
+}
 
-  /* Bouton de la section "Mes Notebooks" */
-  .btn-outline-success {
-      transition: background-color 0.3s, color 0.3s;
-  }
+/* Bouton de la section "Mes Notebooks" */
+.btn-outline-success {
+    transition: background-color 0.3s, color 0.3s;
+}
 
-  .btn-outline-success:hover {
-      background-color: #28a745;
-      color: white;
-  }
+.btn-outline-success:hover {
+    background-color: #28a745;
+    color: white;
+}
 </style>
