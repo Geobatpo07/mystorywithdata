@@ -82,12 +82,12 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Charger header et footer
-            fetch('components/header.html')
+            fetch('static/components/header.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('header').innerHTML = data;
                 });
-            fetch('components/footer.html')
+            fetch('static/components/footer.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('footer').innerHTML = data;

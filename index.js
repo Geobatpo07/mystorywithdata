@@ -9,7 +9,12 @@ app.use(express.static(path.join(__dirname)));
 
 // Route principale
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'static/index.html'));
+});
+
+// Route vers le blog
+app.get('/blog', (req, res) => {
+    res.sendFile(path.join(__dirname, 'static/blog.html'));
 });
 
 app.listen(PORT, () => {
